@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="flex-1">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6">
             <span className="text-[#333333]">Husband. Father. </span>
-            <span className="text-[#2A9090]">Builder.</span>
+            <span className="text-[#2A9090]">Entrepreneur.</span>
           </h1>
 
           <p
