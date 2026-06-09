@@ -26,7 +26,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="hover:text-white transition-colors"
           >
-            Steel Blue Kitchen
+            SteelBlue Kitchen
           </a>
         </div>
       </div>

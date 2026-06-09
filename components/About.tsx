@@ -37,7 +37,6 @@ export default function About() {
             </p>
             <p>
               I&apos;m married to the love of my life and we have four kids.
-              We&apos;re based in North Carolina.
             </p>
           </div>
         </div>

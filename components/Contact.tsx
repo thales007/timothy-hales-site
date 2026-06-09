@@ -1,7 +1,7 @@
 const links = [
   { label: "SoleScore", href: "https://solescore.app" },
   { label: "Reselling Shoes", href: "https://resellingshoes.com" },
-  { label: "Steel Blue Kitchen", href: "https://steelbluekitchen.com" },
+  { label: "SteelBlue Kitchen", href: "https://steelbluekitchen.com" },
 ];
 
 export default function Contact() {
