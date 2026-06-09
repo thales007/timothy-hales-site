@@ -15,8 +15,8 @@ export default function About() {
               what I do professionally.
             </p>
             <p>
-              But the entrepreneurial bug goes back further than that. As a kid
-              I ran fair games with Legos as currency. In high school I built a
+              But the entrepreneurial bug goes back further than that. As a kid I turned a container of Legos into a carnival — divvying up the
+              pieces as currency and charging my friends to play the games I invented. In high school I built a
               greenhouse and sold plants at the farmer&apos;s market. Then I
               discovered eBay and never really looked back.
             </p>
