@@ -11,16 +11,21 @@ export default function About() {
           </h2>
           <div className="space-y-4 text-[#555555] leading-relaxed">
             <p>
-              By day I work at Esri, developing GIS training and internal AI workflows.
+              By day I work at Esri, developing GIS training and AI workflows.
               Building digital tools isn&apos;t a side interest — it&apos;s
               what I do professionally.
             </p>
             <p>
-              I&apos;ve been reselling since high school, but got serious about
-              shoes in 2023 — sourcing from thrift stores, yard sales, and
-              discount shops and flipping them on eBay and Poshmark. What
-              started as a hustle turned into a genuine obsession with the
-              process.
+              But the entrepreneurial bug goes back further than that. As a kid
+              I ran fair games with Legos as currency. In high school I built a
+              greenhouse and sold plants at the farmer&apos;s market. Then I
+              discovered eBay and never really looked back.
+            </p>
+            <p>
+              I got serious about shoe reselling in 2023 — sourcing from thrift
+              stores, yard sales, and discount shops and flipping them on eBay
+              and Poshmark. What started as a hustle turned into a genuine
+              obsession with the process.
             </p>
             <p>
               I&apos;ve been creating content for over 20 years — websites,
