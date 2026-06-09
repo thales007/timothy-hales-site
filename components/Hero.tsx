@@ -23,12 +23,10 @@ export default function Hero() {
           </p>
 
           <a
-            href="https://solescore.app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#projects"
             className="inline-block bg-[#2A9090] text-white font-semibold px-7 py-3.5 rounded-lg text-base hover:bg-[#238080] transition-colors duration-200"
           >
-            Explore SoleScore →
+            See what I&apos;m building →
           </a>
         </div>
 

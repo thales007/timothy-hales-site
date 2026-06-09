@@ -11,7 +11,7 @@ export default function About() {
           </h2>
           <div className="space-y-4 text-[#555555] leading-relaxed">
             <p>
-              By day I work at Esri, developing GIS training and AI workflows.
+              By day I work at Esri, developing GIS training and internal AI workflows.
               Building digital tools isn&apos;t a side interest — it&apos;s
               what I do professionally.
             </p>
