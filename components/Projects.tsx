@@ -26,9 +26,9 @@ const projects: Project[] = [
   {
     badge: "Ongoing",
     badgeColor: "#888880",
-    title: "Steel Blue Kitchen",
+    title: "SteelBlue Kitchen",
     description:
-      "Honest kitchen and home product reviews I've tested myself. Focused on what actually holds up in a real household.",
+      "Honest reviews of kitchen knives and cooking gear I've tested myself. Focused on what actually holds up in a real kitchen.",
     link: "https://steelbluekitchen.com",
   },
 ];

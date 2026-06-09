@@ -22,25 +22,26 @@ export default function About() {
               A Little About Me
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#333333] mb-6 leading-snug">
-              Building things on the internet since before it was cool.
+              I built the tool I wished I had.
             </h2>
             <div className="space-y-4 text-[#555555] leading-relaxed">
               <p>
                 I&apos;m a husband and dad who got hooked on shoe reselling and
                 never really looked back. What started as a side hustle sourcing
-                from thrift stores turned into a full obsession with building
-                tools that make the work easier for everyday resellers.
+                shoes from thrift stores turned into a full obsession with
+                building tools that make the work easier for everyday resellers.
               </p>
               <p>
-                SoleScore came out of a problem I kept running into at the rack —
-                no quick way to know if a shoe was actually worth buying. I built
-                the tool I wished I had, and it turns out a lot of other people
-                wanted it too.
+                SoleScore came out of a problem I kept running into at the thrift
+                store — no quick way to know if a shoe was actually worth buying.
+                I built the tool I wished I had, and it turns out a lot of other
+                people wanted it too.
               </p>
               <p>
-                I also run Reselling Shoes, where I write practical guides for
-                people sourcing from thrift stores and yard sales, and Steel Blue
-                Kitchen, where I review the kitchen and home gear I actually use.
+                I also run ResellingShoes.com, where I write practical guides for
+                people sourcing everyday shoes from thrift stores and yard sales,
+                and SteelBlue Kitchen, where I review kitchen knives and cooking
+                gear.
               </p>
               <p>
                 I share what works, what doesn&apos;t, and what I&apos;m learning
