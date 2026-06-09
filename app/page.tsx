@@ -4,10 +4,12 @@ import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ScrollEffects from "@/components/ScrollEffects";
 
 export default function Home() {
   return (
     <>
+      <ScrollEffects />
       <Header />
       <main>
         <Hero />

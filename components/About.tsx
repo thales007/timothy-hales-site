@@ -1,15 +1,14 @@
 export default function About() {
   return (
-    <section id="about" className="bg-[#F0EDEA] py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="max-w-[680px] mx-auto">
-          <p className="text-xs font-semibold tracking-widest uppercase text-[#2A9090] mb-3">
-            A Little About Me
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#333333] mb-6 leading-snug">
-            My first business ran on Legos. I&apos;ve been building something ever since.
+    <section className="section section--sand" id="about">
+      <div className="wrap">
+        <div className="about--simple reveal">
+          <p className="sec-eyebrow">A little about me</p>
+          <h2 className="sec-title">
+            My first business ran on Legos. I&apos;ve been building something
+            ever since.
           </h2>
-          <div className="space-y-4 text-[#555555] leading-relaxed">
+          <div className="about__body">
             <p>
               By day I work at Esri, developing GIS training and AI workflows.
               Building digital tools isn&apos;t a side interest — it&apos;s
