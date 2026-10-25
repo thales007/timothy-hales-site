@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Schibsted_Grotesk, Figtree } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/site";
 
 const schibsted = Schibsted_Grotesk({
   subsets: ["latin"],
@@ -18,21 +19,21 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Timothy Hales — Husband, Father, Entrepreneur",
-  description:
-    "Timothy Hales builds tools and content for everyday shoe resellers — and shares what he learns along the way. Home base for SoleScore, Reselling Shoes, and SteelBlue Kitchen.",
+  metadataBase: new URL(SITE_URL),
+  title: { default: SITE_TITLE, template: "%s | Timothy Hales" },
+  description: SITE_DESCRIPTION,
+  // og:image / twitter:image come from app/opengraph-image.tsx
   openGraph: {
-    title: "Timothy Hales — Husband, Father, Entrepreneur",
-    description:
-      "I build tools and content for everyday shoe resellers — and share what I learn along the way.",
-    url: "https://timothyhales.com",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
     siteName: "Timothy Hales",
     type: "website",
-    images: [{ url: "https://timothyhales.com/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://timothyhales.com/og-image.png"],
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
   icons: {
     icon: [

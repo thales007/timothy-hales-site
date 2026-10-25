@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { LINKEDIN_URL } from "@/lib/site";
+
 export default function Footer() {
   return (
     <footer className="site-foot">
@@ -6,14 +9,11 @@ export default function Footer() {
           © {new Date().getFullYear()} Timothy Hales. All rights reserved.
         </span>
         <nav className="site-foot__links">
-          <a href="https://shoes.timothyhales.com" target="_blank" rel="noopener noreferrer">
-            SoleScore
-          </a>
-          <a href="https://resellingshoes.com" target="_blank" rel="noopener noreferrer">
-            Reselling Shoes
-          </a>
-          <a href="https://steelbluekitchen.com" target="_blank" rel="noopener noreferrer">
-            SteelBlue Kitchen
+          <Link href="/books">Books</Link>
+          <Link href="/work">Work</Link>
+          <Link href="/about">About</Link>
+          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
+            LinkedIn
           </a>
         </nav>
       </div>

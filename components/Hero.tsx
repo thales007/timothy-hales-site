@@ -8,21 +8,14 @@ export default function Hero() {
           {/* Left: text */}
           <div className="reveal">
             <h1 className="hero__h1">
-              Husband. Father.<br />
-              <em>Entrepreneur.</em>
+              Geospatial educator, author, and <em>innovator.</em>
             </h1>
             <p className="hero__lede">
-              I build tools and content for everyday shoe resellers — and share
-              what I learn along the way.
+              Twenty years in the GIS industry. I develop training that helps
+              people learn GIS software, and now a book that introduces GIS to
+              kids. Along the way, I&apos;m always experimenting with new ways
+              to teach, build, and solve problems.
             </p>
-            <div className="hero__cta">
-              <a href="#projects" className="btn btn--primary">
-                See what I&apos;m building →
-              </a>
-              <a href="#about" className="btn btn--ghost">
-                My story
-              </a>
-            </div>
           </div>
 
           {/* Right: portrait */}

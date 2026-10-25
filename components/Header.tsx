@@ -1,35 +1,38 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "Projects", href: "#projects" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Books", href: "/books" },
+  { label: "Work", href: "/work" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleClick = (href: string) => {
-    setMenuOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+  const pathname = usePathname();
+  const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
   return (
     <header className="nav" id="nav">
       <div className="wrap nav__inner">
-        <a href="#top" className="wm nav__wm" onClick={() => handleClick("#top")}>
+        <Link href="/" className="wm nav__wm" onClick={() => setMenuOpen(false)}>
           Timothy <span className="last">Hales</span>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="nav__links">
           {navLinks.map((link) => (
-            <button key={link.href} onClick={() => handleClick(link.href)}>
+            <Link
+              key={link.href}
+              href={link.href}
+              aria-current={isActive(link.href) ? "page" : undefined}
+            >
               {link.label}
-            </button>
+            </Link>
           ))}
         </nav>
 
@@ -38,6 +41,7 @@ export default function Header() {
           className="nav__hamburger"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
         >
           <span style={{ transform: menuOpen ? "translateY(7px) rotate(45deg)" : undefined }} />
           <span style={{ opacity: menuOpen ? 0 : 1 }} />
@@ -48,9 +52,14 @@ export default function Header() {
       {/* Mobile menu */}
       <div className={`nav__mobile${menuOpen ? " open" : ""}`}>
         {navLinks.map((link) => (
-          <button key={link.href} onClick={() => handleClick(link.href)}>
+          <Link
+            key={link.href}
+            href={link.href}
+            onClick={() => setMenuOpen(false)}
+            aria-current={isActive(link.href) ? "page" : undefined}
+          >
             {link.label}
-          </button>
+          </Link>
         ))}
       </div>
     </header>
