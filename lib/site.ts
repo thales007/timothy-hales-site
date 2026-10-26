@@ -2,7 +2,7 @@
 // replace them with the real value and the page updates everywhere.
 
 export const SITE_URL = "https://timothyhales.com";
-export const SITE_TITLE = "Timothy Hales | Geospatial Educator, Author, and Innovator";
+export const SITE_TITLE = "Timothy Hales | Educator, Author, and Innovator";
 export const SITE_DESCRIPTION =
   "Twenty years in the GIS industry, developing training that helps people learn GIS software. Author of ABCs of GIS.";
 
