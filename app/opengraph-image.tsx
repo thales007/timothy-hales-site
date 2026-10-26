@@ -29,6 +29,8 @@ export default async function Image() {
           </div>
           <div
             style={{
+              display: "flex",
+              flexDirection: "column",
               fontSize: 64,
               fontWeight: 800,
               color: "#25201A",
@@ -37,7 +39,9 @@ export default async function Image() {
               letterSpacing: -2,
             }}
           >
-            Geospatial educator, author, and innovator.
+            <span>Geospatial educator.</span>
+            <span>Author.</span>
+            <span style={{ color: "#C2603C" }}>Innovator.</span>
           </div>
           <div style={{ fontSize: 28, color: "#5A5249", marginTop: 28 }}>
             Author of ABCs of GIS

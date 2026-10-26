@@ -8,7 +8,9 @@ export default function Hero() {
           {/* Left: text */}
           <div className="reveal">
             <h1 className="hero__h1">
-              Geospatial educator, author, and <em>innovator.</em>
+              Geospatial educator.<br />
+              Author.<br />
+              <em>Innovator.</em>
             </h1>
             <p className="hero__lede">
               Twenty years in the GIS industry. I develop training that helps
