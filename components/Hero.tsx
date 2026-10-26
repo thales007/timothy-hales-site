@@ -6,11 +6,12 @@ export default function Hero() {
       <div className="wrap">
         <div className="hero__grid">
           {/* Left: text */}
-          <div className="reveal">
-            <h1 className="hero__h1">
-              Geospatial educator.<br />
-              Author.<br />
-              <em>Innovator.</em>
+          <div className="hero__text reveal">
+            {/* Each phrase stays on one line; size scales with the column. */}
+            <h1 className="hero__h1 hero__h1--lines">
+              <span>Geospatial educator.</span>
+              <span>Children&apos;s author.</span>
+              <em>Curious innovator.</em>
             </h1>
             <p className="hero__lede">
               Twenty years in the GIS industry. I develop training that helps
