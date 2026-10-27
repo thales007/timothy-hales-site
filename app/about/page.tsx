@@ -60,7 +60,7 @@ export default function AboutPage() {
                 school, I built a greenhouse and sold plants at the
                 farmer&apos;s market. Now I run a shoe reselling business,
                 and every find is a chance to teach my kids how to spot value
-                and turn it into a profit.
+                and what a little hard work can return.
               </p>
             </div>
           </div>
