@@ -29,7 +29,7 @@ export type Book = {
   cover: string;
   /** Paths under /public, or a single [PLACEHOLDER]. */
   samplePages: string[];
-  /** Book-page accent colors; swap for the cover's real colors. */
+  /** Book-page accent colors, taken from the cover. */
   colors: { bg: string; ink: string; accent: string };
   faq: { q: string; a: string }[];
 };
@@ -52,9 +52,9 @@ export const books: Book[] = [
     ],
     readingAge: "[READING_AGE]",
     amazonUrl: "[AMAZON_BOOK_URL]",
-    cover: "[COVER_IMAGE]",
+    cover: "/covers/abcs-of-gis.jpg",
     samplePages: ["[SAMPLE_PAGES]"],
-    colors: { bg: "#E9EFE3", ink: "#25201A", accent: "#6E7B53" },
+    colors: { bg: "#FFF3D1", ink: "#1E1E1E", accent: "#2D6BE4" },
     faq: [
       {
         q: "What is GIS?",
