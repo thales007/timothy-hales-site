@@ -53,11 +53,14 @@ export default function AboutPage() {
                 with <Link href="/books/abcs-of-gis">ABCs of GIS</Link>.
               </p>
               <p>
-                I&apos;ve always liked building things. As a kid I turned a
+                I&apos;ve been starting little businesses for as long as I can
+                remember. As a kid, I turned a
                 container of Legos into a carnival, using the pieces as currency
                 and charging my friends to play the games I invented. In high
-                school I built a greenhouse and sold plants at the
-                farmer&apos;s market.
+                school, I built a greenhouse and sold plants at the
+                farmer&apos;s market. Now I run a shoe reselling business,
+                and every find is a chance to teach my kids how to spot value
+                and turn it into a profit.
               </p>
             </div>
           </div>
