@@ -21,7 +21,9 @@ export default function BookNews() {
         body: new FormData(e.currentTarget),
         headers: { Accept: "application/json" },
       });
-      setStatus(res.ok ? "done" : "error");
+      // Kit answers 200 even when it rejects a signup, so check its status field.
+      const data = await res.json().catch(() => null);
+      setStatus(res.ok && data?.status === "success" ? "done" : "error");
     } catch {
       setStatus("error");
     }
