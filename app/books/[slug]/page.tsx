@@ -103,14 +103,6 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
                 ))}
               </dl>
             </div>
-
-            <p className="publisher reveal">
-              Published by{" "}
-              <a href="https://selahcreativemedia.com" target="_blank" rel="noopener noreferrer">
-                Selah Creative Media
-              </a>
-              .
-            </p>
           </div>
         </section>
       </div>
