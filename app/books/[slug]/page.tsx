@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteShell from "@/components/SiteShell";
+import BookNews from "@/components/BookNews";
 import { BookCover, BuyButtons, SamplePages, Todo } from "@/components/BookBits";
 import { books, getBook, isTodo } from "@/lib/site";
 
@@ -86,6 +87,8 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
                 ))}
               </dl>
             </div>
+
+            <BookNews />
 
             <p className="publisher reveal">
               Published by{" "}

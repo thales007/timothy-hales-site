@@ -12,6 +12,9 @@ export const LINKEDIN_URL = "https://www.linkedin.com/in/timothyhales/";
 // TODO: replace with the Amazon Author Central page once it exists.
 export const AMAZON_AUTHOR_URL = "[AMAZON_AUTHOR_URL]";
 
+// TODO: Kit form ID (the number in the form's embed code). The signup form stays hidden until it's set.
+export const KIT_FORM_ID = "[KIT_FORM_ID]";
+
 /** True while a value is still a [PLACEHOLDER]. */
 export const isTodo = (value: string) => value.startsWith("[") && value.endsWith("]");
 
