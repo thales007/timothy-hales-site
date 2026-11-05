@@ -18,13 +18,13 @@ export default async function Image() {
           height: "100%",
           display: "flex",
           alignItems: "center",
-          background: "#F6EFE3",
+          background: "#FFFFFF",
           padding: "0 72px",
           gap: 64,
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
-          <div style={{ fontSize: 30, fontWeight: 700, color: "#C2603C", letterSpacing: 2 }}>
+          <div style={{ fontSize: 30, fontWeight: 700, color: "#2D6BE4", letterSpacing: 2 }}>
             TIMOTHY HALES
           </div>
           <div
@@ -34,7 +34,7 @@ export default async function Image() {
               fontSize: 54,
               fontWeight: 800,
               whiteSpace: "nowrap",
-              color: "#25201A",
+              color: "#14171C",
               lineHeight: 1.05,
               marginTop: 22,
               letterSpacing: -2,
@@ -42,9 +42,9 @@ export default async function Image() {
           >
             <span>Geospatial educator.</span>
             <span>Children&apos;s author.</span>
-            <span style={{ color: "#C2603C" }}>Curious innovator.</span>
+            <span style={{ color: "#2D6BE4" }}>Curious innovator.</span>
           </div>
-          <div style={{ fontSize: 28, color: "#5A5249", marginTop: 28 }}>
+          <div style={{ fontSize: 28, color: "#4A5260", marginTop: 28 }}>
             Author of ABCs of GIS
           </div>
         </div>
