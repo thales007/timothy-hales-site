@@ -55,11 +55,14 @@ export const books: Book[] = [
       "Teachers and librarians introducing geography and technology",
       "GIS professionals who want to share what they do with their own kids",
     ],
-    readingAge: "[READING_AGE]",
+    readingAge: "4–8, and fun for anyone learning GIS",
     releaseDate: "November 18, 2026",
     amazonUrl: "[AMAZON_BOOK_URL]",
     cover: "/covers/abcs-of-gis.jpg",
-    samplePages: ["[SAMPLE_PAGES]"],
+    samplePages: [
+      "/books/abcs-of-gis/b-is-for-buffer.jpg",
+      "/books/abcs-of-gis/c-is-for-clip.jpg",
+    ],
     colors: { bg: "#FFF3D1", ink: "#1E1E1E", accent: "#2D6BE4" },
     faq: [
       {
