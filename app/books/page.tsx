@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteShell from "@/components/SiteShell";
 import BookNews from "@/components/BookNews";
-import { BookActions, BookCover, SamplePages, Todo } from "@/components/BookBits";
-import { books, isTodo } from "@/lib/site";
+import { BookActions, BookCover, SamplePages } from "@/components/BookBits";
+import { books } from "@/lib/site";
 
 // /books is printed in the books' author bio. Keep this URL permanent.
 
@@ -37,8 +37,7 @@ export default function BooksPage() {
                     <Link href={`/books/${book.slug}`}>{book.title}</Link>
                   </h2>
                   <p className="book-row__meta">
-                    Reading age:{" "}
-                    {isTodo(book.readingAge) ? <Todo token={book.readingAge} /> : book.readingAge}
+                    {book.audience}
                   </p>
                   <p className="book-row__desc">{book.short}</p>
                   <BookActions book={book} />

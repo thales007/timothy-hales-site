@@ -3,8 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteShell from "@/components/SiteShell";
 import BookNews from "@/components/BookNews";
-import { BookCover, BuyButtons, SamplePages, Todo } from "@/components/BookBits";
-import { books, getBook, isReleased, isTodo } from "@/lib/site";
+import { BookCover, BuyButtons, SamplePages } from "@/components/BookBits";
+import { books, getBook, isReleased } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -51,8 +51,7 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
                   <p key={p} className="sec-sub">{p}</p>
                 ))}
                 <p className="book-row__meta">
-                  Reading age:{" "}
-                  {isTodo(book.readingAge) ? <Todo token={book.readingAge} /> : book.readingAge}
+                  {book.audience}
                 </p>
                 {isReleased(book) ? (
                   <BuyButtons book={book} />
