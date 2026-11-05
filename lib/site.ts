@@ -27,6 +27,8 @@ export type Book = {
   description: string[];
   whoFor: string[];
   readingAge: string;
+  /** Shown before launch, e.g. "November 18, 2026". */
+  releaseDate: string;
   amazonUrl: string;
   /** Path under /public, e.g. "/images/books/abcs-of-gis.jpg", or a [PLACEHOLDER]. */
   cover: string;
@@ -54,6 +56,7 @@ export const books: Book[] = [
       "GIS professionals who want to share what they do with their own kids",
     ],
     readingAge: "[READING_AGE]",
+    releaseDate: "November 18, 2026",
     amazonUrl: "[AMAZON_BOOK_URL]",
     cover: "/covers/abcs-of-gis.jpg",
     samplePages: ["[SAMPLE_PAGES]"],
@@ -80,3 +83,6 @@ export const books: Book[] = [
 ];
 
 export const getBook = (slug: string) => books.find((b) => b.slug === slug);
+
+/** A book counts as released once its real Amazon link is in. */
+export const isReleased = (book: Book) => !isTodo(book.amazonUrl);

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteShell from "@/components/SiteShell";
-import { AmazonButton, BookCover, SamplePages, Todo } from "@/components/BookBits";
-import { AMAZON_AUTHOR_URL, books, isTodo } from "@/lib/site";
+import BookNews from "@/components/BookNews";
+import { BookActions, BookCover, SamplePages, Todo } from "@/components/BookBits";
+import { books, isTodo } from "@/lib/site";
 
 // /books is printed in the books' author bio. Keep this URL permanent.
 
@@ -40,12 +41,7 @@ export default function BooksPage() {
                     {isTodo(book.readingAge) ? <Todo token={book.readingAge} /> : book.readingAge}
                   </p>
                   <p className="book-row__desc">{book.short}</p>
-                  <div className="btn-row">
-                    <AmazonButton url={book.amazonUrl} label="Buy on Amazon" />
-                    <Link href={`/books/${book.slug}`} className="btn btn--ghost">
-                      About the book
-                    </Link>
-                  </div>
+                  <BookActions book={book} />
                   <p className="book-row__sub">Peek inside</p>
                   <SamplePages book={book} />
                 </div>
@@ -53,10 +49,7 @@ export default function BooksPage() {
             ))}
           </div>
 
-          <div className="more reveal">
-            <p className="more__line">More books on the way.</p>
-            <AmazonButton url={AMAZON_AUTHOR_URL} label="Follow me on Amazon" variant="ghost" />
-          </div>
+          <BookNews eyebrow="More books on the way" />
         </div>
       </section>
     </SiteShell>

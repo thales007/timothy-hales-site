@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import SiteShell from "@/components/SiteShell";
 import BookNews from "@/components/BookNews";
 import { BookCover, BuyButtons, SamplePages, Todo } from "@/components/BookBits";
-import { books, getBook, isTodo } from "@/lib/site";
+import { books, getBook, isReleased, isTodo } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -54,7 +54,14 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
                   Reading age:{" "}
                   {isTodo(book.readingAge) ? <Todo token={book.readingAge} /> : book.readingAge}
                 </p>
-                <BuyButtons book={book} />
+                {isReleased(book) ? (
+                  <BuyButtons book={book} />
+                ) : (
+                  <>
+                    <p className="launch">Coming {book.releaseDate}</p>
+                    <BookNews bare title="Want to know when it's out?" />
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -62,6 +69,8 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
 
         <section className="section">
           <div className="wrap book-detail">
+            {isReleased(book) && <BookNews />}
+
             <div className="reveal">
               <h2 className="h3">Who it&apos;s for</h2>
               <ul className="ticks">
@@ -87,8 +96,6 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
                 ))}
               </dl>
             </div>
-
-            <BookNews />
 
             <p className="publisher reveal">
               Published by{" "}

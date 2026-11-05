@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import SiteShell from "@/components/SiteShell";
+import BookNews from "@/components/BookNews";
 
 // Personal About page, in first person. The printed book bio lives in the
 // books themselves; keep this page about Timothy, not the book.
@@ -93,9 +94,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-          <p className="about__close reveal">
-            <Link href="/books">Look for more books from me →</Link>
-          </p>
+          <BookNews eyebrow="More books on the way" />
         </div>
       </section>
     </SiteShell>

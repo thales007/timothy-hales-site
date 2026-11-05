@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { AMAZON_AUTHOR_URL, isTodo, type Book } from "@/lib/site";
+import Link from "next/link";
+import { AMAZON_AUTHOR_URL, isReleased, isTodo, type Book } from "@/lib/site";
 
 /** Visible marker for a value that still needs filling in. */
 export function Todo({ token }: { token: string }) {
@@ -51,6 +52,30 @@ export function AmazonButton({
     <a href={url} target="_blank" rel="noopener noreferrer" className={`btn btn--${variant}`}>
       {label} →
     </a>
+  );
+}
+
+/** Buy + About buttons once released; before launch, the release date + About. */
+export function BookActions({ book }: { book: Book }) {
+  if (!isReleased(book)) {
+    return (
+      <>
+        <p className="launch">Coming {book.releaseDate}</p>
+        <div className="btn-row">
+          <Link href={`/books/${book.slug}`} className="btn btn--ghost">
+            About the book
+          </Link>
+        </div>
+      </>
+    );
+  }
+  return (
+    <div className="btn-row">
+      <AmazonButton url={book.amazonUrl} label="Buy on Amazon" />
+      <Link href={`/books/${book.slug}`} className="btn btn--ghost">
+        About the book
+      </Link>
+    </div>
   );
 }
 
