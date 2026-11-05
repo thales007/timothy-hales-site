@@ -37,7 +37,8 @@ export type Book = {
   samplePages: string[];
   /** Book-page accent colors, taken from the cover. */
   colors: { bg: string; ink: string; accent: string };
-  faq: { q: string; a: string }[];
+  /** `link` is appended to the answer as an inline link. */
+  faq: { q: string; a: string; link?: { href: string; label: string } }[];
 };
 
 export const books: Book[] = [
@@ -79,8 +80,9 @@ export const books: Book[] = [
         a: "Yes. The A-to-Z format makes it easy to read one letter a day or use a page as a starting point for a map activity.",
       },
       {
-        q: "Can libraries and bookstores order it?",
-        a: "Yes. For library, bookstore, or classroom orders, email " + EMAIL + ".",
+        q: "Can I get copies for a classroom or group?",
+        a: "Yes.",
+        link: { href: "/contact", label: "Get in touch and we'll work it out." },
       },
     ],
   },

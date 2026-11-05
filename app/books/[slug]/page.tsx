@@ -90,7 +90,15 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
                 {book.faq.map((f) => (
                   <div key={f.q} className="faq__item">
                     <dt>{f.q}</dt>
-                    <dd>{f.a}</dd>
+                    <dd>
+                      {f.a}
+                      {f.link && (
+                        <>
+                          {" "}
+                          <Link href={f.link.href}>{f.link.label}</Link>
+                        </>
+                      )}
+                    </dd>
                   </div>
                 ))}
               </dl>

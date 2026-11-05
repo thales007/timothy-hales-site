@@ -240,6 +240,7 @@ img { max-width: 100%; display: block; }
 .faq__item { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 22px; }
 .faq dt { font-weight: 700; color: var(--ink); }
 .faq dd { margin: 6px 0 0; color: var(--ink-2); }
+.faq dd a { color: var(--accent-dk); font-weight: 600; }
 .publisher { margin: 0; font-size: 15px; color: var(--ink-3); }
 .publisher a { color: var(--ink-2); font-weight: 600; }
 
