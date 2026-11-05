@@ -17,14 +17,16 @@ export function BookCover({ book, priority }: { book: Book; priority?: boolean }
     );
   }
   return (
-    <Image
-      src={book.cover}
-      alt={`${book.title} cover`}
-      width={600}
-      height={600}
-      className="cover"
-      priority={priority}
-    />
+    <div className="book">
+      <Image
+        src={book.cover}
+        alt={`${book.title} cover`}
+        width={600}
+        height={600}
+        className="cover"
+        priority={priority}
+      />
+    </div>
   );
 }
 
