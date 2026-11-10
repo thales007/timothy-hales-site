@@ -6,7 +6,7 @@ export const SITE_TITLE = "Timothy Hales | Educator, Author, and Innovator";
 export const SITE_DESCRIPTION =
   "Twenty years in the GIS industry, developing training that helps people learn GIS software. Author of ABCs of GIS.";
 
-export const EMAIL = "timothyehales@gmail.com";
+export const EMAIL = "hello@timothyhales.com";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/timothyhales/";
 
 // TODO: replace with the Amazon Author Central page once it exists.
