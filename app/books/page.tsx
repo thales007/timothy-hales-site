@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteShell from "@/components/SiteShell";
 import BookNews from "@/components/BookNews";
-import { BookActions, BookCover, SamplePages } from "@/components/BookBits";
+import { BookActions, BookCover } from "@/components/BookBits";
 import { books } from "@/lib/site";
 
 // /books is printed in the books' author bio. Keep this URL permanent.
@@ -41,8 +41,6 @@ export default function BooksPage() {
                   </p>
                   <p className="book-row__desc">{book.short}</p>
                   <BookActions book={book} />
-                  <p className="book-row__sub">Peek inside</p>
-                  <SamplePages book={book} />
                 </div>
               </article>
             ))}

@@ -25,7 +25,7 @@ export default function ThanksPage() {
             <p className="hero__lede">
               {out
                 ? `${book.title} is out now. I'll email you when the next book is on the way.`
-                : `I'll email you when ${book.title} is out on ${book.releaseDate}.`}{" "}
+                : `I'll email you when ${book.title} is out in ${book.releaseDate}.`}{" "}
               Just a few notes about new books and launches. No spam, no weekly newsletter.
             </p>
             <div className="btn-row" style={{ marginTop: 28 }}>

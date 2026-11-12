@@ -34,10 +34,10 @@ export default function AboutPage() {
                 took me through a few different industries.
               </p>
               <p>
-                Then I discovered GIS, and it stuck. I started working in it
-                while going back to college, first for a degree in geospatial
-                technology, then to finish my bachelor&apos;s in business
-                education.
+                Then I discovered GIS, and was sucked in. I started working
+                with it and chose to go back to college, first for a degree in
+                geospatial technology, then to finish my bachelor&apos;s in
+                business education.
               </p>
               <p>
                 That was more than twenty years ago. I&apos;ve worked in GIS as

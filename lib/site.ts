@@ -28,7 +28,7 @@ export type Book = {
   whoFor: string[];
   /** Who the book is for, shown as-is (not a reading level). */
   audience: string;
-  /** Shown before launch, e.g. "November 18, 2026". */
+  /** Shown before launch, e.g. "November 2026"; reads after "Coming" and "out in". */
   releaseDate: string;
   amazonUrl: string;
   /** Path under /public, e.g. "/images/books/abcs-of-gis.jpg", or a [PLACEHOLDER]. */
@@ -58,7 +58,7 @@ export const books: Book[] = [
       "GIS professionals who want to share what they do with their own kids",
     ],
     audience: "A read-aloud for ages 3–5, and fun for anyone learning GIS.",
-    releaseDate: "November 18, 2026",
+    releaseDate: "November 2026",
     amazonUrl: "[AMAZON_BOOK_URL]",
     cover: "/covers/abcs-of-gis.jpg",
     samplePages: [
