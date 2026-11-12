@@ -53,9 +53,9 @@ export const books: Book[] = [
     ],
     whoFor: [
       "Kids who love maps, puzzles, and asking how things work",
-      "Parents and homeschool families looking for a fresh way to learn about the world",
+      "Parents and homeschool families who want to explore maps and technology together",
       "Teachers and librarians introducing geography and technology",
-      "GIS professionals who want to share what they do with their own kids",
+      "GIS professionals who want to share what they do with the kids in their life",
     ],
     audience: "A read-aloud for ages 3–5, and fun for anyone learning GIS.",
     releaseDate: "November 2026",
