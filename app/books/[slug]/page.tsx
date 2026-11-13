@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteShell from "@/components/SiteShell";
 import BookNews from "@/components/BookNews";
-import { BookCover, BuyButtons, SamplePages } from "@/components/BookBits";
+import { BookCover, BuyButtons, Praise, SamplePages } from "@/components/BookBits";
 import { books, getBook, isReleased } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -69,6 +69,8 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
         <section className="section">
           <div className="wrap book-detail">
             {isReleased(book) && <BookNews />}
+
+            <Praise book={book} />
 
             <div className="reveal">
               <h2 className="h3">Who it&apos;s for</h2>

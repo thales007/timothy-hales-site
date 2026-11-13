@@ -302,3 +302,13 @@ img { max-width: 100%; display: block; }
 .book-detail .news { margin-top: 0; }
 @media (min-width: 861px) { .news { grid-template-columns: 1fr 1.1fr; align-items: center; } }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* Reader quotes on the book page */
+.praise { display: grid; gap: 20px; }
+.praise__item { margin: 0; padding: 28px 30px 26px; background: var(--bg-2); border-left: 4px solid var(--book-accent, var(--accent)); border-radius: 4px 16px 16px 4px; }
+.praise__item blockquote { margin: 0; }
+.praise__item blockquote p { margin: 0; font-family: var(--disp); font-size: clamp(19px, 2vw, 23px); line-height: 1.5; font-weight: 500; color: var(--ink); }
+.praise__item figcaption { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 15px; }
+.praise__item figcaption strong { color: var(--ink); }
+.praise__item figcaption span { color: var(--ink-3); }
+.praise__item figcaption span::before { content: "· "; }

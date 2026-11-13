@@ -37,6 +37,8 @@ export type Book = {
   samplePages: string[];
   /** Book-page accent colors, taken from the cover. */
   colors: { bg: string; ink: string; accent: string };
+  /** Reader quotes, shown on the book page. Only add ones the person agreed to share. */
+  praise?: { quote: string; name: string; role: string }[];
   /** `link` is appended to the answer as an inline link. */
   faq: { q: string; a: string; link?: { href: string; label: string } }[];
 };
@@ -56,6 +58,14 @@ export const books: Book[] = [
       "Parents and homeschool families who want to explore maps and technology together",
       "Teachers and librarians introducing geography and technology",
       "GIS professionals who want to share what they do with the kids in their life",
+    ],
+    praise: [
+      {
+        quote:
+          "I love this book! What a smart and fun way to teach our children the alphabet and map skills. The book is simply written using colorful symbols and definitions.",
+        name: "Deanna C.",
+        role: "Elementary Teacher",
+      },
     ],
     audience: "A read-aloud for ages 3–5, and fun for anyone learning GIS.",
     releaseDate: "November 2026",

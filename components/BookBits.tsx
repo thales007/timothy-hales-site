@@ -111,3 +111,23 @@ export function SamplePages({ book }: { book: Book }) {
     </div>
   );
 }
+
+/** Reader quotes as pull quotes. Renders nothing when a book has none. */
+export function Praise({ book }: { book: Book }) {
+  if (!book.praise?.length) return null;
+  return (
+    <div className="praise">
+      {book.praise.map((p) => (
+        <figure key={p.name} className="praise__item reveal">
+          <blockquote>
+            <p>&ldquo;{p.quote}&rdquo;</p>
+          </blockquote>
+          <figcaption>
+            <strong>{p.name}</strong>
+            <span>{p.role}</span>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  );
+}
