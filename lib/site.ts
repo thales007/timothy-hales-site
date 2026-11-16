@@ -28,9 +28,12 @@ export type Book = {
   whoFor: string[];
   /** Who the book is for, shown as-is (not a reading level). */
   audience: string;
-  /** Shown before launch, e.g. "November 2026"; reads after "Coming" and "out in". */
+  /** Shown before launch, e.g. "November 18, 2026"; reads after "Coming" and "out on". */
   releaseDate: string;
+  /** Paperback on Amazon. Setting this flips the site from "coming soon" to "buy". */
   amazonUrl: string;
+  /** Kindle edition on Amazon (pre-order before launch), or a [PLACEHOLDER]. */
+  kindleUrl: string;
   /** Path under /public, e.g. "/images/books/abcs-of-gis.jpg", or a [PLACEHOLDER]. */
   cover: string;
   /** Paths under /public, or a single [PLACEHOLDER]. */
@@ -68,8 +71,9 @@ export const books: Book[] = [
       },
     ],
     audience: "A read-aloud for ages 3–5, and fun for anyone learning GIS.",
-    releaseDate: "November 2026",
+    releaseDate: "November 18, 2026",
     amazonUrl: "[AMAZON_BOOK_URL]",
+    kindleUrl: "https://link.amazon/B0j2VxcYi",
     cover: "/covers/abcs-of-gis.jpg",
     samplePages: [
       "/books/abcs-of-gis/b-is-for-buffer.jpg",
@@ -102,3 +106,5 @@ export const getBook = (slug: string) => books.find((b) => b.slug === slug);
 
 /** A book counts as released once its real Amazon link is in. */
 export const isReleased = (book: Book) => !isTodo(book.amazonUrl);
+/** Before launch, with the Kindle pre-order page live. */
+export const canPreorder = (book: Book) => !isReleased(book) && !isTodo(book.kindleUrl);

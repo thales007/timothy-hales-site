@@ -312,3 +312,5 @@ img { max-width: 100%; display: block; }
 .praise__item figcaption strong { color: var(--ink); }
 .praise__item figcaption span { color: var(--ink-3); }
 .praise__item figcaption span::before { content: "· "; }
+
+.site-foot__note { margin: 6px 0 0; font-size: 12px; color: #8C95A3; }

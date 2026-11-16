@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AMAZON_AUTHOR_URL, isReleased, isTodo, type Book } from "@/lib/site";
+import { canPreorder, isReleased, isTodo, type Book } from "@/lib/site";
 
 /** Visible marker for a value that still needs filling in. */
 export function Todo({ token }: { token: string }) {
@@ -49,7 +49,7 @@ export function AmazonButton({
     );
   }
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer" className={`btn btn--${variant}`}>
+    <a href={url} target="_blank" rel="sponsored noopener noreferrer" className={`btn btn--${variant}`}>
       {label} →
     </a>
   );
@@ -62,6 +62,7 @@ export function BookActions({ book }: { book: Book }) {
       <>
         <p className="launch">Coming {book.releaseDate}</p>
         <div className="btn-row">
+          {canPreorder(book) && <AmazonButton url={book.kindleUrl} label="Pre-order on Kindle" />}
           <Link href={`/books/${book.slug}`} className="btn btn--ghost">
             About the book
           </Link>
@@ -82,8 +83,20 @@ export function BookActions({ book }: { book: Book }) {
 export function BuyButtons({ book }: { book: Book }) {
   return (
     <div className="btn-row">
-      <AmazonButton url={book.amazonUrl} label="Buy on Amazon" />
-      <AmazonButton url={AMAZON_AUTHOR_URL} label="Follow me on Amazon" variant="ghost" />
+      <AmazonButton url={book.amazonUrl} label="Buy the paperback" />
+      {!isTodo(book.kindleUrl) && (
+        <AmazonButton url={book.kindleUrl} label="Kindle edition" variant="ghost" />
+      )}
+    </div>
+  );
+}
+
+/** Kindle pre-order button for the book page hero, before launch. */
+export function PreorderButton({ book }: { book: Book }) {
+  if (!canPreorder(book)) return null;
+  return (
+    <div className="btn-row">
+      <AmazonButton url={book.kindleUrl} label="Pre-order on Kindle" />
     </div>
   );
 }

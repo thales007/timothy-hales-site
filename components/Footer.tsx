@@ -5,9 +5,12 @@ export default function Footer() {
   return (
     <footer className="site-foot">
       <div className="wrap site-foot__inner">
-        <span className="site-foot__copy">
-          © {new Date().getFullYear()} Timothy Hales. All rights reserved.
-        </span>
+        <div>
+          <span className="site-foot__copy">
+            © {new Date().getFullYear()} Timothy Hales. All rights reserved.
+          </span>
+          <p className="site-foot__note">As an Amazon Associate I earn from qualifying purchases.</p>
+        </div>
         <nav className="site-foot__links">
           <Link href="/books">Books</Link>
           <Link href="/work">Work</Link>

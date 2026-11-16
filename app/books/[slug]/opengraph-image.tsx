@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { join } from "node:path";
 import { readFile } from "node:fs/promises";
-import { books, getBook, isReleased, isTodo } from "@/lib/site";
+import { books, canPreorder, getBook, isReleased, isTodo } from "@/lib/site";
 
 // Link-preview image for a book page: the cover as a paperback, with title and byline.
 export const alt = "Book cover and title, by Timothy Hales";
@@ -80,7 +80,11 @@ export default async function Image({ params }: { params: Promise<{ slug: string
             {book.audience}
           </div>
           <div style={{ fontSize: 28, fontWeight: 700, color: book.colors.accent, marginTop: 26 }}>
-            {isReleased(book) ? "Available on Amazon" : `Coming ${book.releaseDate}`}
+            {isReleased(book)
+              ? "Available on Amazon"
+              : canPreorder(book)
+                ? `Coming ${book.releaseDate} · Kindle pre-order open`
+                : `Coming ${book.releaseDate}`}
           </div>
         </div>
       </div>
