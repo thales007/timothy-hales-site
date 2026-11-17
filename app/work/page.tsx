@@ -8,7 +8,7 @@ import SiteShell from "@/components/SiteShell";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Over 20 years with Esri software and 16 years at Esri: GIS software training, Esri Community management, and technical support.",
+    "Over two decades in geospatial technology, most of them at Esri: GIS software training, Esri Community management, and technical support.",
 };
 
 const employers = [
@@ -102,8 +102,8 @@ export default function WorkPage() {
             <p className="sec-eyebrow">Work</p>
             <h1 className="sec-title">Twenty years of helping people learn GIS</h1>
             <p className="sec-sub">
-              I&apos;ve worked with Esri software for over 20 years, 16 of them
-              at Esri. Along the way I&apos;ve supported users, built a
+              I&apos;ve worked with geospatial technology for over two decades,
+              most of them at Esri. Along the way I&apos;ve supported users, built a
               community, and written training that turns complex ArcGIS
               workflows into clear lessons.
             </p>
