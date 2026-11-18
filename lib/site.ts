@@ -10,7 +10,7 @@ export const EMAIL = "hello@timothyhales.com";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/timothyhales/";
 
 // TODO: replace with the Amazon Author Central page once it exists.
-export const AMAZON_AUTHOR_URL = "[AMAZON_AUTHOR_URL]";
+export const AMAZON_AUTHOR_URL = "https://amazon.com/author/timothyhales";
 
 // Kit form "New book alerts" (the number in the form's embed code). The signup form stays hidden while this is a placeholder.
 export const KIT_FORM_ID = "10146221";
@@ -72,7 +72,7 @@ export const books: Book[] = [
     ],
     audience: "A read-aloud for ages 3–5, and fun for anyone learning GIS.",
     releaseDate: "November 18, 2026",
-    amazonUrl: "[AMAZON_BOOK_URL]",
+    amazonUrl: "https://link.amazon/B02cw8TU8",
     kindleUrl: "https://link.amazon/B0j2VxcYi",
     cover: "/covers/abcs-of-gis.jpg",
     samplePages: [

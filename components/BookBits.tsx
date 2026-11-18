@@ -72,7 +72,7 @@ export function BookActions({ book }: { book: Book }) {
   }
   return (
     <div className="btn-row">
-      <AmazonButton url={book.amazonUrl} label="Buy on Amazon" />
+      <AmazonButton url={book.amazonUrl} label="Buy the paperback" />
       <Link href={`/books/${book.slug}`} className="btn btn--ghost">
         About the book
       </Link>
