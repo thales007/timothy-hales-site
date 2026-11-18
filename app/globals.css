@@ -253,7 +253,7 @@ img { max-width: 100%; display: block; }
 .site-foot { background: var(--ink); color: #AEB6C2; }
 .site-foot__inner {
   display: flex; flex-wrap: wrap; align-items: center;
-  justify-content: space-between; gap: 16px; padding: 26px 0;
+  justify-content: space-between; gap: 16px; padding-block: 26px;
 }
 .site-foot__copy { font-size: 14px; color: #8C95A3; }
 .site-foot__links { display: flex; flex-wrap: wrap; gap: 28px; }

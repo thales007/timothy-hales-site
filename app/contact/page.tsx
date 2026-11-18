@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
-import { EMAIL, LINKEDIN_URL } from "@/lib/site";
+import { AMAZON_AUTHOR_URL, EMAIL, LINKEDIN_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -27,6 +27,9 @@ export default function ContactPage() {
             </a>
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
               LinkedIn
+            </a>
+            <a href={AMAZON_AUTHOR_URL} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
+              Amazon author page
             </a>
           </div>
           <p className="contact__email reveal">{EMAIL}</p>
